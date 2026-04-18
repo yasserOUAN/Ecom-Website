@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     E-Commerce Platform — Books Category Page
+     WAD Homework L2 2025/2026 — UMBB
+     ============================================================
+     Displays 3 book products with Add to Cart.
+     Includes two persistent aside sections (sticky sidebars).
+     ============================================================ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop bestselling books at LuxeCart — sci-fi novels, gourmet cookbooks, and programming guides with free shipping.">
+  <title>LuxeCart — Books</title>
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── HEADER (same as main page) ── -->
+  <header class="site-header">
+    <a href="main.html" class="header-logo" title="LuxeCart Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.16 14.26l.04-.12.96-1.74h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020.07 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.13 0-.22-.09-.22-.22l-.04-.26z"/>
+      </svg>
+    </a>
+    <h1 class="store-name">LuxeCart</h1>
+  </header>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav" aria-label="Category navigation">
+    <ul class="nav-list">
+      <li><a href="main.html" id="nav-home"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="electronics.html" id="nav-electronics"><span class="nav-icon">💻</span> Electronics</a></li>
+      <li><a href="clothing.html" id="nav-clothing"><span class="nav-icon">👕</span> Clothing</a></li>
+      <li><a href="books.html" class="active" id="nav-books"><span class="nav-icon">📚</span> Books</a></li>
+      <li><a href="cart.html" id="nav-cart"><span class="nav-icon">🛒</span> Cart <span class="cart-badge">0</span></a></li>
+      <li><a href="#" id="btn-logout"><span class="nav-icon">🚪</span> Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CATEGORY LAYOUT: Products + Two Sticky Asides
+       ══════════════════════════════════════════════════════════ -->
+  <div class="category-layout">
+
+    <!-- ── PRODUCT SECTION (3 articles) ── -->
+    <section class="products-section" aria-label="Book products">
+
+      <!-- Product 7: Echoes of Tomorrow (Sci-Fi Novel) -->
+      <article class="product-card" id="product-7">
+        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=400&fit=crop"
+             alt="Echoes of Tomorrow — award-winning sci-fi novel"
+             class="product-card-image" loading="lazy">
+        <div class="product-card-body">
+          <h2 class="product-card-name">Echoes of Tomorrow</h2>
+          <div class="product-card-price">$24.99</div>
+          <p class="product-card-desc">
+            Award-winning sci-fi novel exploring humanity's first contact
+            with an ancient interstellar civilization. 480 pages of gripping storytelling.
+          </p>
+          <div class="product-card-actions">
+            <input type="number" min="1" value="1" class="qty-input"
+                   id="qty-product-7" aria-label="Quantity for Echoes of Tomorrow">
+            <button class="btn-add-cart" id="add-product-7"
+                    data-id="7"
+                    data-name="Echoes of Tomorrow"
+                    data-price="24.99"
+                    data-image="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=400&fit=crop">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 8: The Art of Modern Cuisine (Cookbook) -->
+      <article class="product-card" id="product-8">
+        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&h=400&fit=crop"
+             alt="The Art of Modern Cuisine — illustrated cookbook"
+             class="product-card-image" loading="lazy">
+        <div class="product-card-body">
+          <h2 class="product-card-name">The Art of Modern Cuisine</h2>
+          <div class="product-card-price">$39.99</div>
+          <p class="product-card-desc">
+            A beautifully illustrated cookbook with 200+ gourmet recipes
+            from Michelin-starred chefs around the world. Hardcover edition.
+          </p>
+          <div class="product-card-actions">
+            <input type="number" min="1" value="1" class="qty-input"
+                   id="qty-product-8" aria-label="Quantity for The Art of Modern Cuisine">
+            <button class="btn-add-cart" id="add-product-8"
+                    data-id="8"
+                    data-name="The Art of Modern Cuisine"
+                    data-price="39.99"
+                    data-image="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&h=400&fit=crop">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 9: Code & Craft: Python Mastery -->
+      <article class="product-card" id="product-9">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910auj7?w=600&h=400&fit=crop"
+             alt="Code and Craft Python Mastery — programming guide"
+             class="product-card-image" loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=400&fit=crop'">
+        <div class="product-card-body">
+          <h2 class="product-card-name">Code & Craft: Python Mastery</h2>
+          <div class="product-card-price">$44.99</div>
+          <p class="product-card-desc">
+            Comprehensive guide to Python programming — from fundamentals
+            to AI/ML — with 500+ hands-on exercises and real-world projects.
+          </p>
+          <div class="product-card-actions">
+            <input type="number" min="1" value="1" class="qty-input"
+                   id="qty-product-9" aria-label="Quantity for Code & Craft Python Mastery">
+            <button class="btn-add-cart" id="add-product-9"
+                    data-id="9"
+                    data-name="Code & Craft: Python Mastery"
+                    data-price="44.99"
+                    data-image="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=400&fit=crop">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </section><!-- /.products-section -->
+
+    <!-- ── TWO PERSISTENT ASIDE SECTIONS ── -->
+    <div class="aside-container">
+
+      <!-- Aside 1: Shopping Guidelines (auto-scrolling text) -->
+      <aside class="aside-box" id="aside-guidelines" aria-label="Shopping guidelines">
+        <div class="aside-title">📋 Shopping Guidelines</div>
+        <div class="aside-scroll-content">
+          <div class="aside-scroll-inner">
+            <p>📖 <strong>Book Formats:</strong> All books are available in hardcover. E-book versions coming soon to our digital store.</p>
+            <p>🌍 <strong>International Editions:</strong> Our books are printed in English. Translated editions are available for select titles.</p>
+            <p>↩️ <strong>Easy Returns:</strong> Return any book within 30 days in its original condition for a full refund.</p>
+            <p>🚚 <strong>Free Shipping:</strong> Free standard shipping on all book orders over $25. No minimum for Prime members.</p>
+            <p>✍️ <strong>Author Signed:</strong> Select titles are available with authentic author signatures — look for the "Signed" badge.</p>
+            <p>📦 <strong>Careful Packaging:</strong> Every book is individually wrapped in protective packaging to ensure it arrives in perfect condition.</p>
+            <!-- Duplicated for continuous scroll effect -->
+            <p>📖 <strong>Book Formats:</strong> All books are available in hardcover. E-book versions coming soon.</p>
+            <p>🌍 <strong>International Editions:</strong> Our books are printed in English. Translated editions available for select titles.</p>
+            <p>↩️ <strong>Easy Returns:</strong> Return any book within 30 days in its original condition for a full refund.</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Aside 2: Cart Summary -->
+      <aside class="aside-box aside-cart-summary" id="aside-cart" aria-label="Cart summary">
+        <div class="aside-title">🛒 Cart Summary</div>
+        <div id="aside-cart-summary">
+          <div class="summary-row">
+            <span>Items in cart:</span>
+            <span>0</span>
+          </div>
+          <div class="summary-row">
+            <span>Total:</span>
+            <span>$0.00</span>
+          </div>
+        </div>
+        <a href="cart.html" class="btn-view-cart">View Cart →</a>
+      </aside>
+
+    </div><!-- /.aside-container -->
+
+  </div><!-- /.category-layout -->
+
+  <!-- ── FOOTER ── -->
+  <div id="footer-checkout" class="footer-checkout"></div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-student-info">
+        <div class="info-line">
+          <span class="info-icon">👤</span>
+          <span>Student Name — [Your Full Name]</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📧</span>
+          <span>student@email.com — [Your Email]</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🆔</span>
+          <span>Group X / Section Y — [Your Group & Section]</span>
+        </div>
+      </div>
+      <button class="btn-checkout" id="btn-category-checkout">
+        🛒 Checkout
+      </button>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

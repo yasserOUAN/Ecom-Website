@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     E-Commerce Platform — Main Product Catalog Page
+     WAD Homework L2 2025/2026 — UMBB
+     ============================================================
+     Displays 3 product category articles: Electronics, Clothing,
+     Books. Each links to its dedicated category page.
+     ============================================================ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LuxeCart — Browse our premium collection of electronics, clothing, and books. Shop top brands at unbeatable prices.">
+  <title>LuxeCart — Shop Premium Products</title>
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER SECTION
+       - Logo (left-aligned) with shopping cart SVG icon
+       - Store name (center-aligned)
+       - Background image overlay via CSS
+       ══════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <!-- Logo (left side) -->
+    <a href="main.html" class="header-logo" title="LuxeCart Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.16 14.26l.04-.12.96-1.74h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020.07 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.13 0-.22-.09-.22-.22l-.04-.26z"/>
+      </svg>
+    </a>
+    <!-- Store name (centered) -->
+    <h1 class="store-name">LuxeCart</h1>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAVIGATION SECTION
+       - Links to each product category page
+       - Link to the shopping cart page
+       ══════════════════════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="main.html" class="active" id="nav-home"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="electronics.html" id="nav-electronics"><span class="nav-icon">💻</span> Electronics</a></li>
+      <li><a href="clothing.html" id="nav-clothing"><span class="nav-icon">👕</span> Clothing</a></li>
+      <li><a href="books.html" id="nav-books"><span class="nav-icon">📚</span> Books</a></li>
+      <li><a href="cart.html" id="nav-cart"><span class="nav-icon">🛒</span> Cart <span class="cart-badge">0</span></a></li>
+      <li><a href="#" id="btn-logout"><span class="nav-icon">🚪</span> Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN SECTION — 3 Category Articles
+       Each article describes a product category with:
+       - Preview image
+       - Short description
+       - Link to the category page
+       ══════════════════════════════════════════════════════════ -->
+  <main class="main-content">
+    <h2 class="section-title">Explore Our Collections</h2>
+    <p class="section-subtitle">Discover premium products handpicked just for you</p>
+
+    <div class="category-grid">
+
+      <!-- Article 1: Electronics -->
+      <article class="category-card" id="card-electronics">
+        <img src="images/category-electronics.png" alt="Electronics category — smartphones, laptops, and headphones"
+             class="category-card-image" loading="lazy">
+        <div class="category-card-body">
+          <h3 class="category-card-title">Electronics</h3>
+          <p class="category-card-desc">
+            Discover the latest in technology — smartphones, laptops, and premium headphones from top brands.
+            Cutting-edge performance meets elegant design.
+          </p>
+          <a href="electronics.html" class="category-card-link">
+            Browse Electronics →
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 2: Clothing -->
+      <article class="category-card" id="card-clothing">
+        <img src="images/category-clothing.png" alt="Clothing category — jackets, sneakers, and accessories"
+             class="category-card-image" loading="lazy">
+        <div class="category-card-body">
+          <h3 class="category-card-title">Clothing</h3>
+          <p class="category-card-desc">
+            Elevate your style with premium fashion — handcrafted leather jackets, designer sneakers,
+            and luxury timepieces that make a statement.
+          </p>
+          <a href="clothing.html" class="category-card-link">
+            Browse Clothing →
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 3: Books -->
+      <article class="category-card" id="card-books">
+        <img src="images/category-books.png" alt="Books category — novels, cookbooks, and programming guides"
+             class="category-card-image" loading="lazy">
+        <div class="category-card-body">
+          <h3 class="category-card-title">Books</h3>
+          <p class="category-card-desc">
+            Feed your mind with our curated collection — bestselling novels, gourmet cookbooks,
+            and expert programming guides for every level.
+          </p>
+          <a href="books.html" class="category-card-link">
+            Browse Books →
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /.category-grid -->
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER SECTION
+       Student information with icons on separate lines
+       ══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-student-info">
+        <div class="info-line">
+          <span class="info-icon">👤</span>
+          <span>Student Name — [Your Full Name]</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📧</span>
+          <span>student@email.com — [Your Email]</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🆔</span>
+          <span>Group X / Section Y — [Your Group & Section]</span>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 LuxeCart — WAD Homework L2, UMBB
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
