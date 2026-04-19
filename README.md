@@ -1,6 +1,6 @@
 # LuxeCart - E-Commerce Platform
 
-![LuxeCart](images/product-laptop.png) *(Note: Replace with your actual project logo/screenshot if available)*
+*(Note: Replace with your actual project logo/screenshot if available)*
 
 LuxeCart is a premium, modern e-commerce web application. It was originally developed as part of the WAD Homework L2 2025/2026 for UMBB. The platform features an intuitive, glassmorphism-inspired UI and provides a complete shopping experience from product catalog navigation to cart management and simulated checkout.
 
